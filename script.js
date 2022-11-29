@@ -118,6 +118,7 @@ window.addEventListener('load', function(){
             this.shotSound =document.getElementById('shot');
             this.hitSound =document.getElementById('hit');
             this.shieldSound =document.getElementById('shieldSound');
+            this.musicSound =document.getElementById('music');
         }
         powerUp(){this.powerUpSound.play();}
         powerDown(){this.powerDownSound.play();}
@@ -125,6 +126,8 @@ window.addEventListener('load', function(){
         shot(){this.shotSound.play();}
         hit(){this.hitSound.play();}
         shield(){this.shieldSound.play();}
+        music(){this.musicSound.play();}
+
     }
     class Player{
         constructor(game){
@@ -516,13 +519,14 @@ window.addEventListener('load', function(){
             this.enemyInterval = 1000;
             this.gameOver = false;
             this.score = 0;
-            this.winningScore = 65;
+            this.winningScore = 200;
             this.gameTime = 0;
             this.timeLimit = 40000;
             this.speed = 1;
             this.debug = true;
             this.explosions = [];
             this.sound = new SoundController();
+            
         }
 
         update(deltaTime){
@@ -594,6 +598,7 @@ window.addEventListener('load', function(){
         }
 
         draw(context){
+            this.sound.music();
             this.background.draw(context);
             this.player.draw(context);
             this.enemies.forEach(enemy => {
