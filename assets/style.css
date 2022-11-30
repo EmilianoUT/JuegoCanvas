@@ -46,8 +46,6 @@
 #stalker,
 #fireExplosion,
 #smokeExplosion,
-#moonfish,
-#shield,
-#shieldSound{
+#moonfish {
     display: none;
 }
