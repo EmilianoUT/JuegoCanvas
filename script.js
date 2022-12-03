@@ -684,8 +684,8 @@ window.addEventListener('load', function () {
 
         addEnemy() {
             const randomize = Math.random();
-            if (randomize < 0.3) this.enemies.push(new Angler1(this));
-            else if (randomize < 0.2) this.enemies.push(new Stalker(this));
+            if (randomize < 0.2) this.enemies.push(new Angler1(this));
+            else if (randomize < 0.3) this.enemies.push(new Stalker(this));
             else if (randomize < 0.5) this.enemies.push(new Razorfin(this));
             else if (randomize < 0.6) this.enemies.push(new Angler2(this));
             else if (randomize < 0.7) this.enemies.push(new BulbWhale(this));
